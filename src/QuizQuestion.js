@@ -5,9 +5,7 @@ class QuizQuestion extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            incorrectAnswer: false
-        }
+        this.state = { incorrectAnswer: false }
     }
 
     render() {
@@ -34,14 +32,10 @@ class QuizQuestion extends Component {
 
     handleClick(buttonText) {
         if (buttonText === this.props.quiz_question.answer) {
-            this.setState((state) => {
-                return { incorrectAnswer: false };
-            });
+            this.setState({ incorrectAnswer: false });
             this.props.showNextQuestionHandler();
         } else {
-            this.setState((state) => {
-                return { incorrectAnswer: true };
-            });
+            this.setState({ incorrectAnswer: true });
         }
     }
 }
